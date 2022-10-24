@@ -1,0 +1,6 @@
+# Compile
+artifacts/
+cache/
+
+# Secrets
+secrets.json
