@@ -1,0 +1,40 @@
+{
+  "description": "A snobbish clarinet player who works in a fast-food restaurant.",
+  "external_url": "https://nicuvrabii.com",
+  "image": "https://ipfs.io/ipfs/QmUcryM3fXppaBNC2YWZmyENy8ZJnaVQrkrKkgq63xtgJJ",
+  "name": "Handsome Squidward",
+  "attributes": [
+    {
+      "trait_type": "Intellect",
+      "value": "Above average"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Godlike"
+    },
+    {
+      "trait_type": "Special ability",
+      "value": "Clarinet rampage"
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Bicep pump",
+      "value": 1.0
+    },
+    {
+      "display_type": "boost_number",
+      "trait_type": "Special destination limb",
+      "value": 1
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Number of limbs",
+      "value": 6
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Bicep size (inches)",
+      "value": 22
+    }
+  ]
+}

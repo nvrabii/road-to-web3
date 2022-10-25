@@ -16,14 +16,27 @@ contract RegularCollection is
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
-    uint256 MAX_SUPPLY = 10000;
+
+    // The maximum number of minted NFTs in the collection
+    uint256 constant MAX_SUPPLY = 10000;
+
+    // The number of NFTs minted by an account
+    mapping(address => uint256) private _mintedCountBy;
+
+    // The maximum number of NFTs that can be minted by an account
+    uint256 constant MINT_LIMIT = 5;
 
     constructor() ERC721("Regular Collection", "REC") {}
 
     function safeMint(address to, string memory uri) public {
         uint256 tokenId = _tokenIdCounter.current();
         require(tokenId <= 10000, "Max number of minted NFTs has been reached");
+        require(
+            _mintedCountBy[msg.sender] < MINT_LIMIT,
+            "Cannot mint more NFTs from this account"
+        );
         _tokenIdCounter.increment();
+        _mintedCountBy[msg.sender] += 1;
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
     }
