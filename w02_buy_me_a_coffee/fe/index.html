@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy me a coffee ;)</title>
+    <link rel="stylesheet" href="./index.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+    <script type="module" defer src="./index.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="widget">
+        <div class="not-logged-in">Connect with your wallet</div>
+        <div class="logged-in" hidden>
+          <form>
+            <div class="form__header">Buy me a cofee!</div>
+            <div class="form__body">
+              <label>Choose amount (1 coffee == 0.01 ETH):</label>
+              <div class="form__coffee-nb">
+                <div>
+                  <input
+                    type="radio"
+                    value="1"
+                    id="radio-1"
+                    name="amount"
+                    checked
+                  />
+                  <label for="radio-1">1</label>
+                </div>
+                <div>
+                  <input type="radio" value="2" id="radio-2" name="amount" />
+                  <label for="radio-2">2</label>
+                </div>
+                <div>
+                  <input type="radio" value="3" id="radio-3" name="amount" />
+                  <label for="radio-3">3</label>
+                </div>
+              </div>
+
+              <label>From<span class="red">*</span></label>
+              <input
+                type="text"
+                name="from"
+                id="from"
+                placeholder="e.g. John"
+              />
+              <label>Message<span class="red">*</span></label>
+              <input
+                type="text"
+                name="message"
+                id="message"
+                placeholder="e.g. Dude, you need it more than me"
+              />
+              <button type="submit">Provide</button>
+            </div>
+          </form>
+
+          <div class="memos">
+            <div class="memos__header"></div>
+            <div class="memos__list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

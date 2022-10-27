@@ -1,0 +1,128 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  min-width: 320px;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 24px;
+}
+
+.widget {
+  max-width: 400px;
+  width: 100%;
+  background-color: #eee;
+  padding: 40px 24px;
+}
+
+.not-logged-in {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+form {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.form__header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+form label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #595959;
+  margin-bottom: 8px;
+}
+
+.form__coffee-nb {
+  margin-bottom: 24px;
+}
+
+.form__coffee-nb > div {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+form input[type="radio"] {
+  display: inline;
+}
+
+form input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 6px 12px;
+
+  border: 2px solid #ccc;
+}
+
+form button {
+  display: block;
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 20px;
+
+  border: 2px solid #000;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.red {
+  color: #ef0a0a;
+}
+
+.memos__header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.memo {
+  border-radius: 4px;
+  background-color: #ddd;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.memo__title {
+  font-size: 14px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.memo__body {
+  font-size: 16px;
+  font-style: italic;
+}
