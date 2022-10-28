@@ -1,12 +1,13 @@
 const { expect } = require("chai");
 
 describe("CoffeeFund", () => {
+  let CoffeeFund;
   let contract;
   let owner;
   let donator;
 
   before(async () => {
-    const CoffeeFund = await ethers.getContractFactory("CoffeeFund");
+    CoffeeFund = await ethers.getContractFactory("CoffeeFund");
     contract = await CoffeeFund.deploy();
     await contract.deployed();
 
@@ -22,14 +23,24 @@ describe("CoffeeFund", () => {
 
   it("allows valid deposit", async () => {
     const amount = "10.0";
-    await contract.connect(donator).buyCoffee("John", "Hello there", {
+    const from = "John";
+    const message = "Hello there";
+
+    const tx = await contract.connect(donator).buyCoffee(from, message, {
       value: ethers.utils.parseEther(amount),
     });
+    const { logs } = await tx.wait();
+    const [log] = logs.map((log) => CoffeeFund.interface.parseLog(log));
 
     const balance = await ethers.provider.getBalance(contract.address);
 
     expect(ethers.utils.formatEther(balance)).equals(amount);
-    // check event
+
+    expect(log.name).equals("CoffeeBought");
+    expect(log.args[0]).equals(donator.address);
+    expect(ethers.utils.formatEther(log.args[1])).equals(amount);
+    expect(log.args[2]).equals(from);
+    expect(log.args[3]).equals(message);
   });
 
   it("disallows empty deposit", async () => {
@@ -40,12 +51,15 @@ describe("CoffeeFund", () => {
   });
 
   it("allows withdraw from topped up fund", async () => {
-    await contract.connect(owner).withdraw();
+    const tx = await contract.connect(owner).withdraw();
+    const { logs } = await tx.wait();
+    const [log] = logs.map((log) => CoffeeFund.interface.parseLog(log));
 
     const balance = await ethers.provider.getBalance(contract.address);
 
     expect(parseInt(balance)).equals(0);
-    // check event
+    expect(log.name).equals("CoffeeFundWithdrawn");
+    expect(ethers.utils.formatEther(log.args[0])).equals("10.0");
   });
 
   it("gets memos", async () => {

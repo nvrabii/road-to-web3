@@ -7,7 +7,7 @@ contract CoffeeFund is Ownable {
     struct Memo {
         address sender;
         uint256 amount;
-        string fromAlias;
+        string from;
         string message;
     }
 
