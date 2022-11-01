@@ -1,0 +1,6 @@
+# Compilation
+artifacts
+cache
+
+# Secrets
+.env

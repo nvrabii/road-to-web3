@@ -99,8 +99,6 @@ async function sendFunds(ether, from, message) {
 
 function addListeners() {
   document.querySelector("form").addEventListener("submit", handleFormSubmit);
-
-  // @todo add listener for CoffeeBought(amount, from, message)
 }
 
 function resetForm() {
