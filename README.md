@@ -7,7 +7,8 @@ This repo contains my solutions to the Alchemy's 10 week course "Road to Web3".
 1. Week 1: How to Develop an NFT Smart Contract
 2. Week 2: How to build a "Buy me a coffee" DeFi Dapp
 3. Week 3: How to Make NFTs with On-Chain Metadata
-4. ...
+4. Week 4: Create a NFT Gallery
+5. ...
 
 ## Week 1: How to Develop an NFT Smart Contract
 
@@ -51,3 +52,14 @@ All the new NFTs start from the `white` belt. By calling `promote(uint256 tokenI
 - Hardhat
 - Alchemy (Polygon Mumbai, JsonRPC endpoint)
 - Polygonscan (tesnet)
+
+## Week 4: Create a NFT Galery
+
+Explore NFTs by owner, by owner and collection, or by collection only.
+
+### Technologies
+
+- Alchemy NFT API
+- Next.js
+- Tailwind CSS
+- HTML, CSS & Javascript
