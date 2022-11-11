@@ -8,7 +8,12 @@ This repo contains my solutions to the Alchemy's 10 week course "Road to Web3".
 2. Week 2: How to build a "Buy me a coffee" DeFi Dapp
 3. Week 3: How to Make NFTs with On-Chain Metadata
 4. Week 4: Create a NFT Gallery
-5. ...
+5. Week 5: Connect APIs to Your Smart Contract with Chainlink
+6. ...
+7. ...
+8. ...
+9. ...
+10. ...
 
 ## Week 1: How to Develop an NFT Smart Contract
 
@@ -51,7 +56,7 @@ All the new NFTs start from the `white` belt. By calling `promote(uint256 tokenI
 - ethers.js
 - Hardhat
 - Alchemy (Polygon Mumbai, JsonRPC endpoint)
-- Polygonscan (tesnet)
+- Polygonscan (testnet)
 
 ## Week 4: Create a NFT Galery
 
@@ -63,3 +68,19 @@ Explore NFTs by owner, by owner and collection, or by collection only.
 - Next.js
 - Tailwind CSS
 - HTML, CSS & Javascript
+
+## Week 5: Connect APIs to Your Smart Contract with Chainlink
+
+Wrote a NFT smart contract that dynamically changes the `tokenURI` when the price of BTC goes up or down. Additionally, it uses a random number generator.
+
+The `HodlPunks` smart contract implements `KeeperCompatibleInterface` (to allow a cron job, Chainlink upkeep, to inject off-chain data in the contract. In this case - USD/BTC exchange rate) and `VRFConsumerBaseV2` (to allow Chainlink's random number generator to write in the contract the random words).
+
+### Technologies
+
+- Solidity
+- Chainlink (upkeep, data feeds, VRF)
+- OpenZeppelin (ERC721 created via the Wizard)
+- ethers.js
+- Hardhat
+- Polygonscan (testnet)
+- OpenSea (tetnets)

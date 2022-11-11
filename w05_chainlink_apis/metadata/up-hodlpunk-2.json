@@ -1,0 +1,23 @@
+{
+  "name": "HodlPunk",
+  "description": "To hodl, or not to hodl, that is the question...",
+  "image": "https://ipfs.io/ipfs/QmcmaEUZ2jwNwXjGV8qC8EKsAZk4tm9dPGcsrCnW52pdzp/up-hodlpunk-2.png",
+  "attributes": [
+    {
+      "trait_type": "skin tone",
+      "value": "olive"
+    },
+    {
+      "trait_type": "facial hair",
+      "value": "none"
+    },
+    {
+      "trait_type": "piercings",
+      "value": "golden dot earring"
+    },
+    {
+      "trait_type": "head accessory",
+      "value": "ego cap"
+    }
+  ]
+}
